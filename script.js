@@ -41,7 +41,7 @@ const tripData = {
                 description: "Drive to New Jersey",
                 icon: "fas fa-route",
                 meme: "images/right-right-jrntr.gif",
-                meme_title: "Prasanna driving to NJ! 🚗"
+                meme_title: " driving to NJ! 🚗"
             },
             {
                 time: "Site Visit Time",
