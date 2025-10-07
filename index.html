@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Trip 2025 - October 9-14</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Leaflet Maps CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Fall Trip 2025</h1>
+            <p class="hero-subtitle">October 9 - 14, 2025</p>
+            <div class="hero-decoration">
+                <i class="fas fa-maple-leaf"></i>
+                <i class="fas fa-route"></i>
+                <i class="fas fa-camera"></i>
+            </div>
+            
+            <!-- Chicken Out Button on Hero -->
+            <div class="hero-chicken-section">
+                <button class="hero-chicken-button" id="chickenButton">
+                    <i class="fas fa-drumstick-bite"></i>
+                    Click here to see the chicken 🐔
+                </button>
+                <div class="hero-chicken-reveal" id="chickenReveal" style="display: none;">
+                    <div class="hero-chicken-message">
+                        <div class="chicken-dance">
+                            <span>chicken</span>
+                            <span>chicken</span>
+                            <span>chicken</span>
+                            <span>chicken</span>
+                            <span>chicken</span>
+                            <span>chicken</span>
+                            <span>chicken</span>
+                        </div>
+                        <div class="chicken-quote">
+                            <p><strong>And then the wise chicken said:</strong></p>
+                            <blockquote>
+                                "I gave a thought and feel it's better to share this with everyone so that you can plan the trip accordingly... I will not be able to make it to this October trip, considering my work load management -- deployments (non-sync) and difficult to manage at the current scenario... I don't want to be in a position handling work in the middle of the trip and unable to provide my full attention to the activities planned over there. So, I will catch up with you guys later."
+                            </blockquote>
+                            <p class="chicken-attribution">- <em>Anonymous Chicken 🐔</em></p>
+                        </div>
+                        <p class="cursor-note"><strong>Your cursor has been updated to reflect their chicken status!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="trip-overview">
+            <h2>Trip Overview</h2>
+            <div class="overview-stats">
+                <div class="stat-card clickable" id="daysStatCard">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Days</span>
+                    <span class="stat-hint">Click to see day-wise plan</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Destinations</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-camera"></i>
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Memories</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="things-to-bring">
+            <h2>🎒 Things to Bring</h2>
+            <div class="bring-items-grid">
+                <div class="bring-item clickable" data-category="comfort">
+                    <i class="fas fa-bed"></i>
+                    <span>Comfort Items</span>
+                </div>
+                <div class="bring-item clickable" data-category="attire">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Attire</span>
+                </div>
+                <div class="bring-item clickable" data-category="mount-washington">
+                    <i class="fas fa-mountain"></i>
+                    <span>Mount Washington</span>
+                </div>
+                <div class="bring-item clickable" data-category="boardgames">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Board Games</span>
+                </div>
+            </div>
+            
+            <!-- Detailed content for each category -->
+            <div class="bring-details" id="comfortDetails" style="display: none;">
+                <h3>🛏️ Comfort Items</h3>
+                <ul>
+                    <li><strong>Comforters</strong></li>
+                    <li><strong>Pillows</strong></li>
+                </ul>
+            </div>
+            
+            <div class="bring-details" id="attireDetails" style="display: none;">
+                <h3>👕 Attire</h3>
+                <ul>
+                    <li><strong>Flannel shirt + jeans</strong></li>
+                    <li><strong>Sweater</strong></li>
+                    <li><strong>Jacket/vest</strong></li>
+                </ul>
+            </div>
+            
+            <div class="bring-details" id="mount-washingtonDetails" style="display: none;">
+                <h3>🏔️ Mount Washington</h3>
+                <ul>
+                    <li><strong>Jacket or windbreaker</strong></li>
+                    <li><strong>Gloves + beanie</strong></li>
+                </ul>
+            </div>
+            
+            <div class="bring-details" id="boardgamesDetails" style="display: none;">
+                <h3>🎲 Board Games</h3>
+                <ul>
+                    <li><strong>Card games</strong></li>
+                    <li><strong>Board games</strong></li>
+                    <li><strong>Dice games</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="itinerary">
+            <h2>Daily Itinerary</h2>
+            <div class="days-grid" id="daysGrid">
+                <!-- Days will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="travel-map-section">
+            <h2>🗺️ Travel Route</h2>
+            <div class="route-overview">
+                <p>Home → Vermont → New Hampshire → Maine → Home</p>
+            </div>
+            
+            <div class="travel-map-container">
+                <!-- Interactive Real Map -->
+                <div class="interactive-map-section">
+                    <h3>🌍 Route Map</h3>
+                    <div id="tripMap" class="trip-map"></div>
+                    <div class="map-controls">
+                        <button class="map-btn" id="showFullRoute">Show Full Route</button>
+                        <button class="map-btn" id="showStops">Show Stops Only</button>
+                        <button class="map-btn" id="satelliteView">Satellite View</button>
+                    </div>
+                </div>
+                
+                <div class="route-details">
+                    <h3>🛣️ Route</h3>
+                    <div class="route-segments">
+                        <div class="segment">
+                            <div class="segment-header">
+                                <i class="fas fa-route"></i>
+                                <h4>Day 1-2: Home → Stowe, VT</h4>
+                            </div>
+                            <ul>
+                                <li><strong>Distance:</strong> ~150 miles (2.5 hours)</li>
+                                <li><strong>Route:</strong> I-89 North</li>
+                                <li><strong>Stops:</strong> Montpelier, Waterbury</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="segment">
+                            <div class="segment-header">
+                                <i class="fas fa-mountain"></i>
+                                <h4>Day 3: Stowe → White Mountains, NH</h4>
+                            </div>
+                            <ul>
+                                <li><strong>Distance:</strong> ~120 miles (2.5 hours)</li>
+                                <li><strong>Route:</strong> I-89 South → I-93 North → Route 302</li>
+                                <li><strong>Stops:</strong> Franconia Notch</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="segment">
+                            <div class="segment-header">
+                                <i class="fas fa-compass"></i>
+                                <h4>Day 4: White Mountains → Portland, ME</h4>
+                            </div>
+                            <ul>
+                                <li><strong>Distance:</strong> ~90 miles (2 hours)</li>
+                                <li><strong>Route:</strong> Route 302 East → I-95 South</li>
+                                <li><strong>Stops:</strong> North Conway, Freeport</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="segment">
+                            <div class="segment-header">
+                                <i class="fas fa-home"></i>
+                                <h4>Day 5: Portland → Home</h4>
+                            </div>
+                            <ul>
+                                <li><strong>Distance:</strong> ~100 miles (1.5 hours)</li>
+                                <li><strong>Route:</strong> I-95 South</li>
+                                <li><strong>Stops:</strong> York Beach, Portsmouth</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fall Trip</p>
+    </footer>
+
+    <!-- Loading Animation Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <img id="loadingGif" class="loading-gif" src="images/tenor.gif" alt="Loading..." 
+                 onerror="this.style.display='none'; document.getElementById('fallbackLoader').style.display='block';">
+            <div id="fallbackLoader" class="fallback-loading" style="display: none;"></div>
+            <div class="loading-text">Loading Day Details...</div>
+        </div>
+    </div>
+
+    <!-- Day Detail Modal -->
+    <div id="dayModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet Maps JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Leaflet Routing Machine JavaScript -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

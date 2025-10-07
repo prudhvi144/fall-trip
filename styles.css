@@ -1,0 +1,1530 @@
+/* Custom Cursor Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #ff8a65 100%);
+    min-height: 100vh;
+    cursor: auto; /* Normal cursor initially */
+}
+
+/* Custom Cursor Element */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 70px;
+    background-image: url('images/B06D6306-2D5E-453A-B5B6-BDB55A8E0037_1_201_a.jpeg');
+    background-size: cover;
+    background-position: center top;
+    border-radius: 25px 25px 35px 35px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-25px, -35px);
+    transition: transform 0.1s ease;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none; /* Hidden initially */
+}
+
+/* Cursor hover effects */
+.custom-cursor.hover {
+    transform: translate(-25px, -35px) scale(1.2);
+    border-color: #ff6b6b;
+}
+
+.custom-cursor.click {
+    transform: translate(-25px, -35px) scale(0.8);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23ff6b6b;stop-opacity:1" /><stop offset="50%" style="stop-color:%23ffa726;stop-opacity:1" /><stop offset="100%" style="stop-color:%23ff8a65;stop-opacity:1" /></linearGradient></defs><rect width="100%" height="100%" fill="url(%23grad)"/></svg>');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-decoration i {
+    color: #ffa726;
+    animation: bounce 2s infinite;
+}
+
+/* Hero Chicken Button - 2025 Professional Design */
+.hero-chicken-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.hero-chicken-button {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 1s ease-out 0.9s both;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero-chicken-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.hero-chicken-button:hover::before {
+    left: 100%;
+}
+
+.hero-chicken-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+}
+
+.hero-chicken-button:active {
+    transform: translateY(-1px);
+    transition: all 0.1s ease;
+}
+
+.hero-chicken-button i {
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.hero-chicken-reveal {
+    margin-top: 1.5rem;
+    animation: slideDown 0.5s ease;
+}
+
+.hero-chicken-message {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    backdrop-filter: blur(25px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero-chicken-message h3 {
+    color: #2d3748;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: -0.025em;
+}
+
+.hero-chicken-message p {
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+.chicken-quote {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(237, 242, 247, 0.6));
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #e2e8f0;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.chicken-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+}
+
+.chicken-quote p:first-child {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.025em;
+}
+
+.chicken-quote blockquote {
+    font-style: normal;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.chicken-quote blockquote:before {
+    content: '"';
+    font-size: 2.5rem;
+    color: #cbd5e0;
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+}
+
+.chicken-quote blockquote:after {
+    content: '"';
+    font-size: 2.5rem;
+    color: #cbd5e0;
+    position: absolute;
+    right: 12px;
+    bottom: -8px;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+}
+
+.chicken-attribution {
+    text-align: right;
+    font-weight: 500;
+    color: #6b7280;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.cursor-note {
+    text-align: center;
+    font-weight: 500;
+    color: #6366f1;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(99, 102, 241, 0.1);
+    font-size: 0.9rem;
+    letter-spacing: 0.025em;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Main Content */
+main {
+    background: white;
+    margin-top: -50px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Trip Overview */
+.trip-overview {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0 -20px;
+    padding: 4rem 20px;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.stat-card.clickable {
+    cursor: pointer;
+}
+
+.stat-card.clickable .stat-hint {
+    font-size: 0.8rem;
+    color: #ff6b6b;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Chicken Out Section */
+.chicken-section {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.chicken-button {
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: white;
+    border: none;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: none; /* Will use custom cursor */
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.chicken-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+}
+
+.chicken-button:active {
+    transform: translateY(-1px);
+}
+
+.chicken-button i {
+    margin-right: 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+.chicken-reveal {
+    margin-top: 2rem;
+    animation: slideDown 0.5s ease;
+}
+
+.chicken-message {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 5px solid #ff6b6b;
+}
+
+.chicken-message h3 {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.chicken-message p {
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Things to Bring Section */
+.things-to-bring {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0 -20px;
+    padding: 4rem 20px;
+}
+
+.things-to-bring h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.bring-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bring-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bring-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.bring-item.active {
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: white;
+}
+
+.bring-item.active i {
+    color: white !important;
+}
+
+.bring-item i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.bring-item span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.bring-details {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    animation: slideDown 0.5s ease;
+}
+
+.bring-details h3 {
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.bring-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bring-details li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.bring-details li:last-child {
+    border-bottom: none;
+}
+
+/* Travel Map Section */
+.travel-map-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 4rem 20px;
+    margin: 0 -20px;
+}
+
+.route-overview {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.route-overview p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.travel-map-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Interactive Map Section */
+.interactive-map-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.interactive-map-section h3 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.trip-map {
+    height: 500px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.map-controls {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.map-btn {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(99, 102, 241, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    color: #6366f1;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.map-btn:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.1));
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-1px);
+}
+
+.map-btn.active {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    border-color: #6366f1;
+}
+
+/* Custom Leaflet Popup Styling */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+    font-family: 'Inter', sans-serif;
+    margin: 1rem;
+}
+
+.popup-content h4 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.popup-content p {
+    color: #64748b;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.popup-content .popup-date {
+    color: #6366f1;
+    font-weight: 500;
+}
+
+/* Route Map */
+.route-map {
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    height: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.route-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cpath d='M40 210 Q140 135 260 105 Q320 140 180 165 Q90 165 40 210' stroke='%236366f1' stroke-width='3' fill='none' stroke-dasharray='10,5' opacity='0.6'/%3E%3C/svg%3E") no-repeat center;
+    background-size: 90% 90%;
+}
+
+.route-stop {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.route-stop:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.stop-marker {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+}
+
+.stop-marker.home {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.stop-marker.stowe {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.stop-marker.white-mountains {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.stop-marker.portland {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.stop-marker.return {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.stop-info {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 12px;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.route-stop:hover .stop-info {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.stop-info h4 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.stop-info p {
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.distance {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Route Details */
+.route-details {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.route-details h3 {
+    color: #1e293b;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.route-segments {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.segment {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid #6366f1;
+}
+
+.segment-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.segment-header i {
+    color: #6366f1;
+    font-size: 1.1rem;
+}
+
+.segment-header h4 {
+    color: #1e293b;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.segment ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.segment li {
+    color: #475569;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.segment li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+    font-weight: bold;
+}
+
+.segment strong {
+    color: #1e293b;
+}
+
+/* Itinerary */
+.itinerary {
+    padding: 4rem 20px;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.day-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.day-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #ffa726);
+}
+
+.day-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.day-number {
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.day-info h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.day-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.weather-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff5f5;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.temperature i {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+.temp-high {
+    color: #ff6b6b;
+    font-size: 1rem;
+}
+
+.temp-separator {
+    color: #7f8c8d;
+}
+
+.temp-low {
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.sun-times {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+}
+
+.sunrise, .sunset {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #7f8c8d;
+}
+
+.sunrise i {
+    color: #ffa726;
+}
+
+.sunset i {
+    color: #667eea;
+}
+
+.day-preview {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.day-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.highlight-tag {
+    background: #fff5f5;
+    color: #ff6b6b;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid #ffe0e0;
+}
+
+/* Gallery Preview */
+.gallery-preview {
+    background: #f8f9fa;
+    margin: 0 -20px;
+    padding: 4rem 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.destination-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.destination-info {
+    padding: 1rem;
+}
+
+.destination-info h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.destination-info p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.image-placeholder {
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: white;
+    height: 200px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Loading Animation Overlay */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.loading-gif {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    background: white;
+    padding: 10px;
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Fallback Loading Animation */
+.fallback-loading {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #667eea;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.close:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Meme Modal Styles */
+.meme-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.meme-modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.meme-modal-content {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    max-width: 90%;
+    max-height: 90vh;
+    position: relative;
+    animation: zoomIn 0.3s ease;
+}
+
+.meme-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.meme-modal-header h3 {
+    color: #ff6b6b;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.meme-close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.meme-close:hover {
+    color: #ff6b6b;
+    background: #f8f9fa;
+    transform: rotate(90deg);
+}
+
+.meme-modal-gif {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+    display: block;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Day Detail Styles */
+.day-detail {
+    padding: 3rem;
+}
+
+.day-detail-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.day-detail-header h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.day-detail-date {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.day-detail-weather {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.temperature-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff5f5;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.temperature-detail.has-temp-meme {
+    cursor: pointer;
+    position: relative;
+}
+
+.temperature-detail.has-temp-meme::after {
+    content: "🎭";
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.temperature-detail.has-temp-meme:hover {
+    background: #ffe0e0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.temperature-detail i {
+    color: #ff6b6b;
+    font-size: 1.3rem;
+}
+
+.temp-location {
+    margin-left: 0.5rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.activity-section {
+    margin-bottom: 3rem;
+}
+
+.activity-section h3 {
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    background: #f8f9fa;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ff6b6b;
+    transition: all 0.3s ease;
+}
+
+.activity-list li.has-meme {
+    cursor: pointer;
+}
+
+.activity-list li.has-meme:hover {
+    background: #fff5f5;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+.activity-time {
+    font-weight: 600;
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+.travel-info {
+    background: linear-gradient(135deg, #ff6b6b, #ffa726);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.travel-info h4 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer i {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-decoration {
+        gap: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .days-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .day-detail {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Travel Map Responsive */
+@media (max-width: 1024px) {
+    .travel-map-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .trip-map {
+        height: 400px;
+    }
+    
+    .route-map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .travel-map-section {
+        padding: 2rem 15px;
+    }
+    
+    .route-map {
+        height: 350px;
+        padding: 1.5rem;
+    }
+    
+    .route-details {
+        padding: 1.5rem;
+    }
+    
+    .stop-info {
+        min-width: 150px;
+        padding: 0.75rem;
+    }
+    
+    .segment {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .travel-map-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .route-map {
+        height: 300px;
+        padding: 1rem;
+    }
+    
+    .stop-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .stop-info {
+        min-width: 120px;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
