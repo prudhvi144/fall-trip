@@ -40,8 +40,8 @@ const tripData = {
                 title: "Delaware → New Jersey",
                 description: "Drive to New Jersey",
                 icon: "fas fa-route",
-                meme: "images/rajini-chewing-gum-style-rajini.gif",
-                meme_title: "Prasanna"
+                meme: "images/right-right-jrntr.gif",
+                meme_title: "Prasanna driving to NJ! 🚗"
             },
             {
                 time: "Site Visit Time",
@@ -292,7 +292,7 @@ const tripData = {
                 description: "Drive to Bethel Airbnb",
                 icon: "fas fa-home",
                 meme: "images/harikrishna-enjoying.gif",
-                meme_title: "When you finally make it to the Airbnb! 🏠😄"
+                meme_title: "Airbnb! 🏠😄"
             }
         ],
         backup_plan: {
