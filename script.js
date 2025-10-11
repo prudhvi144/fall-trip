@@ -65,7 +65,7 @@ const tripData = {
                 description: "🚗💨 ",
                 icon: "fas fa-car",
                 meme: "images/rajini-chewing-gum-style-rajini.gif",
-                meme_title: "Prasanna 😎"
+                meme_title: "Prasanna"
             },
             {
                 time: "9:30 PM",
@@ -176,157 +176,131 @@ const tripData = {
     },
     "2025-10-11": {
         dayNumber: 3,
-        title: "Mount Mansfield",
+        title: "Mount Major & Scenic Route",
         date: "Saturday, October 11, 2025",
-        preview: "Stowe → Mount Mansfield → Smuggler's Notch → Sunset Rock → Bethel. .",
-        highlights: ["Stowe Toll Road", "Nose-to-Chin", "Smuggler's Notch", "Sunset Rock", "Bethel"],
+        preview: "Manchester → Mount Major → Eaton → Chocorua Lake → Bethel",
+        highlights: ["Mount Major Hike", "Crystal Lake", "Chocorua Lake", "Bethel Airbnb"],
         activities: [
             {
-                time: "8:00 AM",
-                title: "Breakfast in Stowe",
-                description: "Breakfast in Stowe",
-                icon: "fas fa-coffee"
-            },
-            {
-                time: "8:30 AM",
-                title: "Drive to Toll Road",
-                description: "Drive to toll road",
-                icon: "fas fa-car",
-                meme: "images/mb.gif",
-                meme_title: "How?"
-            },
-            {
-                time: "9:00 AM",
-                title: "Stowe Toll Road",
-                description: "Drive up toll road to Mount Mansfield. Cost: $45 per person",
-                icon: "fas fa-mountain",
-                cost: "$45 per person",
-                backup_plan: "If toll road is closed: Gondola SkyRide option available"
-            },
-            {
                 time: "9:30 AM",
-                title: "Nose-to-Chin Hike",
-                description: "Hike from Nose to Chin. 1.5-2 hours",
-                icon: "fas fa-hiking",
-                difficulty: "Moderate",
-                duration: "1.5-2 hours round trip",
-                meme: "images/dj-tillu-siddhu-jonnalagadda.gif",
-                meme_title: "When you start the epic Nose-to-Chin hike! 🏔️😄"
+                title: "Depart Manchester, NH",
+                description: "Start journey from Manchester",
+                icon: "fas fa-car",
+                meme: "images/rajini-chewing-gum-style-rajini.gif",
+                meme_title: "Road trip begins! 🚗"
             },
             {
-                time: "11:00 AM",
-                title: "Summit at the Chin",
-                description: "Mount Mansfield summit",
-                icon: "fas fa-mountain",
-                highlight: "360° panoramic views"
-            },
-            {
-                time: "11:30 AM",
-                title: "Return to Nose",
-                description: "Hike back to parking area",
+                time: "9:30 → 10:05 AM",
+                title: "Travel to Hopkinton",
+                description: "Drive via Auburn (~35 min)",
                 icon: "fas fa-route"
             },
             {
-                time: "12:30 PM",
-                title: "Drive Down Toll Road",
-                description: "Drive down toll road",
-                icon: "fas fa-camera",
-                meme: "images/telugu-memes-telugu-funny-memes.gif",
-                meme_title: ""
+                time: "10:05 → 10:25 AM",
+                title: "Break in Hopkinton",
+                description: "Fuel, stretch",
+                icon: "fas fa-gas-pump"
             },
             {
-                time: "1:30 PM",
-                title: "Smuggler's Notch",
-                description: "Smuggler's Notch (30-45 min)",
-                icon: "fas fa-mountain",
-                duration: "30-45 minutes"
+                time: "10:25 → 11:00 AM",
+                title: "Drive to New London, NH",
+                description: "~35 min drive",
+                icon: "fas fa-car"
             },
             {
-                time: "2:30 PM",
-                title: "Stowe",
-                description: "Return to Stowe for break",
+                time: "11:00 → 11:30 AM",
+                title: "Lunch in New London",
+                description: "Quick lunch",
                 icon: "fas fa-utensils"
             },
             {
-                time: "3:00 PM",
-                title: "Stowe Area",
-                description: "Trapp Family Lodge or farm stands",
-                icon: "fas fa-camera",
-                meme: "images/telugu-memes-telugu-funny-memes.gif",
-                meme_title: " 📸😄"
+                time: "11:30 AM → 12:50 PM",
+                title: "Drive to Mount Major",
+                description: "Mount Major trailhead (Alton) ~1h 20m",
+                icon: "fas fa-car"
             },
             {
-                time: "5:30 PM",
-                title: "Drive to Sunset Rock",
-                description: "Drive to Sunset Rock",
+                time: "12:50 → 3:20 PM",
+                title: "Mount Major Hike",
+                description: "2.5 hour hike",
+                icon: "fas fa-hiking",
+                duration: "2.5 hours",
+                highlight: "Panoramic lake views",
+                meme: "images/dj-tillu-siddhu-jonnalagadda.gif",
+                meme_title: "Mount Major hike! 🏔️😄"
+            },
+            {
+                time: "3:20 → 4:30 PM",
+                title: "Drive to Eaton, NH",
+                description: "~1h 10m via mountain routes",
+                icon: "fas fa-route",
+                meme: "images/rajini-chewing-gum-style-rajini.gif",
+                meme_title: "Mountain roads! 🚗"
+            },
+            {
+                time: "4:30 → 4:50 PM",
+                title: "Crystal Lake & Little White Church",
+                description: "Quick visit in Eaton, photos",
+                icon: "fas fa-camera",
+                duration: "~20 min"
+            },
+            {
+                time: "4:50 → 5:05 PM",
+                title: "Drive to Chocorua Lake",
+                description: "Tamworth, NH (~15 min)",
+                icon: "fas fa-car"
+            },
+            {
+                time: "5:05 → 5:25 PM",
+                title: "Chocorua Lake Stop",
+                description: "Scenic views",
+                icon: "fas fa-camera",
+                highlight: "Mount Chocorua reflection"
+            },
+            {
+                time: "5:25 → 6:35 PM",
+                title: "Drive to Bethel, Maine",
+                description: "~1h 10m",
                 icon: "fas fa-car",
                 meme: "images/rajini-chewing-gum-style-rajini.gif",
-                meme_title: "Prasanna"
+                meme_title: "Final stretch! 🚗"
             },
             {
-                time: "6:00 PM",
-                title: "Sunset Rock Hike",
-                description: "Hike to Sunset Rock (0.5 mile / 10-15 min)",
-                icon: "fas fa-hiking",
-                duration: "10-15 minutes each way",
-                highlight: "Sunset views of Stowe church steeple + village + Mansfield",
-                meme: "images/dj-tillu-siddhu-jonnalagadda.gif",
-                meme_title: ""
-            },
-            {
-                time: "6:30 PM",
-                title: "Sunset Rock",
-                description: "Sunset Rock views",
-                icon: "fas fa-sun",
-                highlight: "photography"
-            },
-            {
-                time: "7:00 PM",
-                title: "Hike Down",
-                description: "Hike down from Sunset Rock",
-                icon: "fas fa-route"
-            },
-            {
-                time: "7:30 PM",
-                title: "Bethel Airbnb",
-                description: "Drive to Bethel Airbnb",
+                time: "~6:35 PM",
+                title: "Arrive Bethel Airbnb",
+                description: "Check in at Bethel Airbnb",
                 icon: "fas fa-home",
-                meme: "images/harikrishna-enjoying.gif",
-                meme_title: "Airbnb! 🏠😄"
+                meme: "images/brahmi-venky.gif",
+                meme_title: "Airbnb time! 🏠😄"
+            },
+            {
+                time: "Evening",
+                title: "Dinner & Rest",
+                description: "Dinner and relaxation",
+                icon: "fas fa-utensils"
             }
         ],
-        backup_plan: {
-            title: "Gondola SkyRide",
-            description: "If toll road is closed: Gondola SkyRide",
-            cost: "Gondola ticket cost",
-            icon: "fas fa-cable-car"
-        },
         driving: {
-            route: "Stowe → Mount Mansfield → Smuggler's Notch → Sunset Rock → Bethel",
+            route: "Manchester → Hopkinton → New London → Mount Major → Eaton → Chocorua Lake → Bethel",
             drivers: ["Group"],
-            departure: "8:30 AM",
-            arrival: "7:30 PM", 
-            duration: "11 hours",
+            departure: "9:30 AM from Manchester",
+            arrival: "~6:35 PM in Bethel",
+            duration: "~9 hours (includes stops & hike)",
             rules: [
-                "🏔️ Stowe Toll Road hike",
-                "💰 Cost: $45 per person (2 cars = $180 total)",
-                "🎒 Pack hiking gear, lunch, camera",
-                "📱 Check weather",
-                "🌅 Sunset Rock",
-                "🏠 Bethel Airbnb"
-            ],
-            cost_breakdown: {
-                "Toll Road": "$90 per car",
-                "Per Person (2 cars)": "$45",
-                "Total Group Cost": "$180"
-            }
+                "⛽ Fuel stop in Hopkinton",
+                "🍽️ Lunch in New London",
+                "🥾 2.5 hour Mount Major hike",
+                "📸 Crystal Lake & Little White Church photos",
+                "🏞️ Chocorua Lake scenic stop",
+                "🏠 Arrive Bethel with buffer for dinner"
+            ]
         },
         travel: {
-            from: "Stowe",
-            to: "Bethel Airbnb (via Mount Mansfield, Smuggler's Notch, Sunset Rock)",
-            method: "Toll Road + Hiking",
-            duration: "11 hours",
-            notes: "Toll road → Nose-to-Chin → Smuggler's Notch → Sunset Rock → Bethel"
+            from: "Manchester, NH",
+            to: "Bethel, ME Airbnb",
+            method: "Car",
+            duration: "9:30 AM - 6:35 PM",
+            notes: "Mount Major hike + scenic mountain route via Eaton & Chocorua Lake"
         }
     },
     "2025-10-12": {
