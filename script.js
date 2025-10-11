@@ -125,19 +125,25 @@ const tripData = {
                 time: "Morning",
                 title: "Chowrastha",
                 description: "Breakfast at Chowrastha",
-                icon: "fas fa-utensils"
+                icon: "fas fa-utensils",
+                meme: "images/1bhibatsam-brahmanandam.gif",
+                meme_title: "Click to see what happened! 😄"
             },
             {
                 time: "Morning",
                 title: "Work",
                 description: "Work time",
-                icon: "fas fa-laptop"
+                icon: "fas fa-laptop",
+                meme: "images/1control-control-brahmi.gif",
+                meme_title: "Click to see what happened! 😄"
             },
             {
                 time: "Lunch Time",
                 title: "Vambis House",
                 description: "Lunch at Vambis house",
-                icon: "fas fa-home"
+                icon: "fas fa-home",
+                meme: "images/1dilli-character-will-always-full-meals-to-fans-dilli.gif",
+                meme_title: "Click to see what happened! 🍽️😄"
             },
             {
                 time: "2:30 PM",
@@ -145,25 +151,31 @@ const tripData = {
                 description: "Depart for the lake",
                 icon: "fas fa-car",
                 meme: "images/rajini-chewing-gum-style-rajini.gif",
-                meme_title: "Prasanna"
+                meme_title: "Prasanna driving! 🚗"
             },
             {
                 time: "Afternoon",
                 title: "Lake Winnipesaukee",
                 description: "Lake Winnipesaukee",
-                icon: "fas fa-water"
+                icon: "fas fa-water",
+                meme: "images/1chinnodu-peddhodu-mahesh-babu.gif",
+                meme_title: "Click to see what happened! 🏞️😄"
             },
             {
                 time: "Sunset Time",
                 title: "Mount Major",
                 description: "Hike Mount Major for sunset",
-                icon: "fas fa-mountain"
+                icon: "fas fa-mountain",
+                meme: "images/1bhibatsam-brahmanandam.gif",
+                meme_title: "Click to see what happened! 🏔️😄"
             },
             {
                 time: "Evening",
                 title: "USA Chicken & Biscuit",
                 description: "Dinner at USA Chicken & Biscuit",
-                icon: "fas fa-drumstick-bite"
+                icon: "fas fa-drumstick-bite",
+                meme: "images/1dilli-character-will-always-full-meals-to-fans-dilli.gif",
+                meme_title: "Click to see what happened! 🍗😄"
             }
         ],
         travel: {
@@ -193,31 +205,41 @@ const tripData = {
                 time: "9:30 → 10:05 AM",
                 title: "Travel to Hopkinton",
                 description: "Drive via Auburn (~35 min)",
-                icon: "fas fa-route"
+                icon: "fas fa-route",
+                meme: "images/2aaha-abbo.gif",
+                meme_title: "Click to see what happened! 😄"
             },
             {
                 time: "10:05 → 10:25 AM",
                 title: "Break in Hopkinton",
                 description: "Fuel, stretch",
-                icon: "fas fa-gas-pump"
+                icon: "fas fa-gas-pump",
+                meme: "images/2abhaya-hastam-bramhanandham.gif",
+                meme_title: "Click to see what happened! 😄"
             },
             {
                 time: "10:25 → 11:00 AM",
                 title: "Drive to New London, NH",
                 description: "~35 min drive",
-                icon: "fas fa-car"
+                icon: "fas fa-car",
+                meme: "images/2adhurs-meme.gif",
+                meme_title: "Click to see what happened! 🚗"
             },
             {
                 time: "11:00 → 11:30 AM",
                 title: "Lunch in New London",
                 description: "Quick lunch",
-                icon: "fas fa-utensils"
+                icon: "fas fa-utensils",
+                meme: "images/2chevilo-puvvulu-baga-peduthunnav-venky.gif",
+                meme_title: "Click to see what happened! 🍽️😄"
             },
             {
                 time: "11:30 AM → 12:50 PM",
                 title: "Drive to Mount Major",
                 description: "Mount Major trailhead (Alton) ~1h 20m",
-                icon: "fas fa-car"
+                icon: "fas fa-car",
+                meme: "images/2chiru-heroes.gif",
+                meme_title: "Click to see what happened! 🚗"
             },
             {
                 time: "12:50 → 3:20 PM",
@@ -242,20 +264,26 @@ const tripData = {
                 title: "Crystal Lake & Little White Church",
                 description: "Quick visit in Eaton, photos",
                 icon: "fas fa-camera",
-                duration: "~20 min"
+                duration: "~20 min",
+                meme: "images/2jathi-ratnalu.gif",
+                meme_title: "Click to see what happened! 📸😄"
             },
             {
                 time: "4:50 → 5:05 PM",
                 title: "Drive to Chocorua Lake",
                 description: "Tamworth, NH (~15 min)",
-                icon: "fas fa-car"
+                icon: "fas fa-car",
+                meme: "images/2kota-kotasrinivasrao.gif",
+                meme_title: "Click to see what happened! 🚗"
             },
             {
                 time: "5:05 → 5:25 PM",
                 title: "Chocorua Lake Stop",
                 description: "Scenic views",
                 icon: "fas fa-camera",
-                highlight: "Mount Chocorua reflection"
+                highlight: "Mount Chocorua reflection",
+                meme: "images/2sankarabharanam-bramhi.gif",
+                meme_title: "Click to see what happened! 🏞️😄"
             },
             {
                 time: "5:25 → 6:35 PM",
@@ -277,7 +305,9 @@ const tripData = {
                 time: "Evening",
                 title: "Dinner & Rest",
                 description: "Dinner and relaxation",
-                icon: "fas fa-utensils"
+                icon: "fas fa-utensils",
+                meme: "images/2telugu-comedy-bhibatsam.gif",
+                meme_title: "Click to see what happened! 🍽️😄"
             }
         ],
         driving: {
